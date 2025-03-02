@@ -113,7 +113,7 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
 const ThreeDCard = () => {
     return (
         <div className="canvas-container">
-            <Canvas camera={{ position: [0, 0, 14], fov: 25 }}
+            <Canvas camera={{ position: [0, 0, 12], fov: 25 }}
                     style={{ position: 'absolute', pointerEvents: 'auto'}}
                     gl={{ 
                       alpha: true,
