@@ -111,10 +111,16 @@ function Band({ maxSpeed = 50, minSpeed = 10 }) {
   }
 
 const ThreeDCard = () => {
-    const { debug } = useControls({ debug: false })
     return (
         <div className="canvas-container">
-            <Canvas camera={{ position: [0, 0, 14], fov: 25 }} style={{ position: 'absolute', pointerEvents: 'auto', }}>
+            <Canvas camera={{ position: [0, 0, 14], fov: 25 }}
+                    style={{ position: 'absolute', pointerEvents: 'auto'}}
+                    gl={{ 
+                      alpha: true,
+                      antialias: true,
+                      transparent: true
+                    }}
+                    >
                 <ambientLight intensity={0.22} />
                 <spotLight 
                 position={[10, 10, 10]} 
@@ -123,15 +129,14 @@ const ThreeDCard = () => {
                 intensity={0.22} 
                 castShadow 
                 />
-                <Physics debug={debug} interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
+                <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
                 <Band />
                 </Physics>
-                <Environment background blur={0.75}>
-                <color attach="background" args={['#F9F6EE']} />
-                <Lightformer intensity={2} color="#F9F6EE" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.4, 1]} />
-                <Lightformer intensity={3} color="#F9F6EE" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.4, 1]} />
-                <Lightformer intensity={3} color="#F9F6EE" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.4, 1]} />
-                <Lightformer intensity={8} color="#F9F6EE" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
+                <Environment background={false}>
+                <Lightformer intensity={1} color="var(--background)" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.4, 1]} />
+                <Lightformer intensity={2} color="var(--background)" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.4, 1]} />
+                <Lightformer intensity={1} color="var(--background)" position={[1, 1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.4, 1]} />
+                <Lightformer intensity={5} color="var(--background)" position={[-10, 0, 14]} rotation={[0, Math.PI / 2, Math.PI / 3]} scale={[100, 10, 1]} />
                 </Environment>
             </Canvas>
         </div>
