@@ -35,13 +35,13 @@
     bottom: 0%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    max-width: 89%;
     min-width: 41%;
+    width: fit-content;
     font-size: 1rem;
     text-align: center;
     text-wrap: truncate;
     color: rgba(128, 128, 128, 0.89);
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 2rem;
     background-color: rgba(211, 211, 211, 0.41);
     border-radius: 0.5rem;
     transition: background-color 0.5s;
