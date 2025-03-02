@@ -18,6 +18,8 @@
 .portfolio-item .video-section {
     position: relative; 
     width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 .portfolio-item .video-section video {
