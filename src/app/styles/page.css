@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    animation: slideRight 1s ease-out forwards;
 }
 
 .second-portfolio-area{
@@ -19,4 +20,29 @@
     justify-content: center;
     align-items: center;
     padding: 6rem 8.18rem;
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-222px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(222px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
