@@ -4,6 +4,10 @@
     width: 100%;
     height: 100%;
     pointer-events: auto; /*This is to allow the user to interact with content*/
+    background-color: var(--accent);
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    box-shadow: -2rem 2rem 1rem 0.1rem rgba(0, 0, 0, 0.41);
 }
 
 .portfolio-item .title{
@@ -11,8 +15,10 @@
     font-weight: bold;
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin: 1rem 0;
     color: var(--primary);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--foreground);
 }
 
 .portfolio-item .video-section {
@@ -28,6 +34,19 @@
     z-index: -1;
 }
 
+.video-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
 .portfolio-item .video-section a {
     text-decoration: none;
     z-index: 1;
@@ -40,9 +59,10 @@
     font-size: 1rem;
     text-align: center;
     text-wrap: truncate;
-    color: rgba(128, 128, 128, 0.89);
-    padding: 0.2rem 2rem;
-    background-color: rgba(211, 211, 211, 0.41);
+    color: rgba(78, 78, 78, 0.66);
+    padding: 0.2rem 4rem;
+    background-color: rgba(211, 211, 211, 0.66);
+    backdrop-filter: blur(4px);
     border-radius: 0.5rem;
     transition: background-color 0.5s;
 }
