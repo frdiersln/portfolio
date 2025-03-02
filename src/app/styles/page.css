@@ -13,9 +13,10 @@
 
 .second-portfolio-area{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr; 
+    grid-column-gap: 22rem;
+    grid-row-gap: 6rem;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 6rem 8.18rem;
 }
