@@ -1,0 +1,12 @@
+.portfolio-container{
+    padding: 3rem;
+}
+
+.first-portfolio-row{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr; 
+    grid-gap: 8rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}

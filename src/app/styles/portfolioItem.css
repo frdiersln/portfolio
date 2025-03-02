@@ -1,0 +1,64 @@
+.portfolio-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+}
+
+.portfolio-item .title{
+    font-size: 4rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    color: var(--primary);
+}
+
+.portfolio-item .video-section {
+    position: relative; 
+    width: 100%;
+}
+
+.portfolio-item .video-section video {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+
+.portfolio-item .video-section a {
+    text-decoration: none;
+    z-index: 1;
+    position: absolute; 
+    bottom: 0%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 89%;
+    min-width: 41%;
+    font-size: 1rem;
+    text-align: center;
+    text-wrap: truncate;
+    color: rgba(128, 128, 128, 0.89);
+    padding: 0.2rem 1rem;
+    background-color: rgba(211, 211, 211, 0.41);
+    border-radius: 0.5rem;
+    transition: background-color 0.5s;
+}
+
+.portfolio-item .video-section a .lucide{
+    position: absolute;
+    left: 1rem;
+}
+
+.portfolio-item .video-section a:hover{
+    color: gray;
+    background-color: lightgray;
+}
+
+.portfolio-item .description{
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: var(--secondary);
+    text-indent: 1.5rem; 
+}

@@ -114,7 +114,7 @@ const ThreeDCard = () => {
     const { debug } = useControls({ debug: false })
     return (
         <div className="canvas-container">
-            <Canvas camera={{ position: [0, 0, 14], fov: 25 }}>
+            <Canvas camera={{ position: [0, 0, 14], fov: 25 }} style={{ position: 'absolute', pointerEvents: 'auto', }}>
                 <ambientLight intensity={0.22} />
                 <spotLight 
                 position={[10, 10, 10]} 

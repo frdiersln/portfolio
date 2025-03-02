@@ -1,5 +1,5 @@
 import { Roboto } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.css";
 
 import ThreeDCard from "@/components/threeDCard";
 
