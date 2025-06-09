@@ -6,6 +6,12 @@ export default function Home() {
 
   const portfolioItems = [
     {
+      title: "Salem The Blue Chapel",
+      description: "A website that provides a 360-degree photo tour of Salem The Blue Chapel building, while also providing information about the building and its surroundings.",
+      link: "https://salemthebluechapel.com",
+      videoPath: "/videos/stbc.mp4"
+    },
+    {
       title: "Track Mood",
       description: "With TrackMood you can easily track your daily moods on a calendar. After sign in with gmail, set your daily mood for start your journey of self-discovery.",
       link: "https://trackmood.vercel.app/",
